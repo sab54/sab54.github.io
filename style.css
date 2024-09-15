@@ -227,25 +227,6 @@ li a.first {
     border-bottom: 3px solid rgb(255, 16, 94);
 }
 
-.fa-gear,
-#report {
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: #E6E6FA;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-}
-
-.fa-gear:hover,
-#report:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px rgba(255, 16, 94, 0.4);
-}
-
 /* End of navigation bar */
 
 /* Home page */

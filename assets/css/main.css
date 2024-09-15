@@ -1,7 +1,7 @@
 /* All pages */
 
-/* his code sets the margin and padding to 0, uses the 'Courier New' 
-font, and applies the `border-box` box-sizing. It also sets the 
+/* his code sets the margin and padding to 0, uses the 'Courier New'
+font, and applies the `border-box` box-sizing. It also sets the
 background color and border using custom CSS variables. Overall,
  this code helps create a consistent and visually appealing layout
   for the webpage. */
@@ -14,11 +14,11 @@ body, html {
   border: var(--border);
 }
 
-/* This CSS code sets the margin and padding to 0 for all 
+/* This CSS code sets the margin and padding to 0 for all
 elements, including pseudo-elements `::before` and `::after`.
- It also applies the `border-box` box-sizing to ensure that the 
- total width and height of elements include the content, padding, 
- and border. This helps create a consistent and predictable layout 
+ It also applies the `border-box` box-sizing to ensure that the
+ total width and height of elements include the content, padding,
+ and border. This helps create a consistent and predictable layout
  for the webpage. */
 *,
 *::before,
@@ -121,7 +121,7 @@ body:not(.night-mode) {
 }
 
 #appearance:not(.text-size) {
-  --font-size:20px;    
+  --font-size:20px;
 }
 
 .text-size{
@@ -145,7 +145,7 @@ footer{
     flex-direction: column;
     text-align: center;
   }
-  
+
 .footer-content p{
   font-size: 14px;
   color: #cacdd2;
@@ -212,7 +212,7 @@ li.nav-link {
   list-style: none;
   display: inline-block;
   padding: 8px 12px;
-  position: relative;  
+  position: relative;
 }
 
 li.nav-link a {
@@ -227,26 +227,7 @@ li.nav-link a {
 
 li a.first{
   border-bottom: 3px solid rgb(255, 16, 94);
-} 
-
-.fa-gear , #report{
-  padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #E6E6FA;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
 }
-
-
-.fa-gear:hover , #report:hover{
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(255, 16, 94, 0.4);
-}
-
 /*end of navigation bar*/
 
 /* Home page*/
@@ -289,7 +270,7 @@ li a.first{
 }
 
 .slide {
-  flex: 0 0 100%; 
+  flex: 0 0 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -350,7 +331,7 @@ li a.first{
 
 .card hr{
   margin-left: 20px ;
-  border:  1px solid rgb(109, 106, 106); 
+  border:  1px solid rgb(109, 106, 106);
   width: 310px;
 
 }
@@ -558,19 +539,19 @@ color: gray;
   background: url(/assets/images/space-travel.png);
   background-color: rgba(36, 59, 85);
   background-image: url(/assets/images/space-travel.png),
-  url(/assets/images/space-travel.png), 
   url(/assets/images/space-travel.png),
-  url(/assets/images/space-travel.png), 
+  url(/assets/images/space-travel.png),
+  url(/assets/images/space-travel.png),
   url(/assets/images/space-travel.png);
 
   background-size: 70px;
   background-repeat: no-repeat;
 
-  background-position: 
-  top 10px left 180px, 
+  background-position:
+  top 10px left 180px,
   top 50px right 60px,
-  top 300px right 300px, 
-  bottom 160px right 30px, 
+  top 300px right 300px,
+  bottom 160px right 30px,
   bottom 200px left 20px;
   padding: 15px;
   box-sizing: border-box;
@@ -755,77 +736,6 @@ margin: 10px 10px 0 0 ;
 
 /* End of subscription */
 
-/* Report page */
-.page {
-display: none;
-}
-
-.page.active {
-display: block;
-}
-
-.report-tab {
-display: flex;
-flex-wrap: wrap;
-padding: 25px;
-}
-
-.report-tab input[type="radio"] {
-display: none;
-}
-.report-tab label {
-padding: 15px;
-background-color:rgb(255, 16, 94);
-color: white;
-margin-right: 5px;
-cursor: pointer;
-font-size: 15px;
-}
-
-.report-tab .open-tab {
-width: 100%;
-padding: 15px;
-background-color: rgba(36, 59, 85);
-order: 1;
-display: none;
-}
-
-.report-tab .open-tab h4 {
-font-size: 2em;
-text-align: center;
-color: white;
-text-decoration: underline;
-}
-
-.report-tab .open-tab p{
-    color: white;
-}
-
-
-.report-tab input[type="radio"]:checked + label + .open-tab {
-display: block;
-}
-
-
-.wireframes-details  summary {
-    padding: 5px;
-    width: 60%;
-    height: 50px;
-    background-color: #eeeeee;
-    color: black;
-    border: none;
-    font-size: 20px;
-    box-shadow: 1px 1px 2px #bbbbbb;
-    cursor: pointer;
-    text-align:  center;
-  }
-  
-  .wireframes-details img{
-    width: 50%;
-  }
-  /* end of report page */
-
-
   @media screen and (max-width: 800px) {
     nav .bars {
       display: block;
@@ -843,20 +753,17 @@ display: block;
     #load-more{
       width:355px;
     }
-    .report-tab {
-      flex-direction: column;
-    }
-  
+
     /* Adjust styles for tabs and content in a vertical layout */
     input[type="radio"] {
       margin-bottom: 10px;
     }
-  
+
     .open-tab {
       display: none; /* Hide content by default */
       margin-bottom: 20px;
     }
-    
+
     input[type="radio"]:checked + label + .open-tab {
       display: block; /* Show content when the corresponding radio button is checked */
     }
@@ -864,11 +771,11 @@ display: block;
     #subscriptionForm {
       margin-right: 0; /* Remove the right margin */
     }
-  
+
     .subscribe-card {
       margin: 10px 0; /* Remove left and right margin, add top and bottom margin */
     }
-  
+
     #subscribeBtn {
       margin: 10px 0; /* Remove right margin, add top margin */
     }
