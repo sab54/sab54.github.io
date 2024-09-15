@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MegaSpace</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <!-- This code is using the `onload` event to call the `onload()` function when the webpage finishes loading for night mode. -->
+    <body onload="onload()">
+        <header>
+            <div class="popup" id="popup-box">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h3>Settings</h3>
+                    <fieldset>
+                        <legend>Prefences to User Screen</legend>
+                        <p>Dark/LightMode:</p><button class="container__btn" onclick="nightmode()">🌙/🌞</button>
+                        <br/><br/>
+                        <p>Font Change:</p><button class="container__btn" onclick="fontchange()">+/-</button>
+                    </fieldset>
+                </div>
+            </div>
+        </header>
+        <!-- This code is creating a navigation bar with a logo, menu icon when mobile version, 
+            and a list of links.The logo is a clickable image that takes you to the homepage. 
+            The menu icon represents a dropdown menu for the navigation links. Each link in the list corresponds 
+            to a different page on the website, such as "Home," "News," "Education," "Feedback," and "Subscribe."
+             There is also a "Report" link and a "Settings" button included in the navigation bar. -->
+        <nav>
+            <a class="logo" href="index.html"><img src="assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" width="120"/></a>
+            <div class="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link"><a href="news.html" >News</a></li>
+                <li class="nav-link"><a href="education.html">Education</a></li>
+                <li class="nav-link"><a href="feedback.html" class="first">Feedback</a></li>
+                <li class="nav-link"><a href="subscribe.html">Subscribe</a></li>
+                <a class="fa fa-file" id="report" href="report.html"> Report</a>
+                <button class="fa fa-gear" onclick="togglePopup()"> Settings</button>
+            </ul>
+        </nav>
+        <section id="appearance">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <div class="rating-box">
+                <!-- This code creates a rating section for "MegaSpace" using stars. Users can select a rating from 1 to 5 stars.-->
+                <i class="fa fa-globe"></i><h3 style="border-bottom: 2px solid #a09599;">Rating MegaSpace:</h3>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5"></i></label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4"></i></label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3"></i></label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2"></i></label>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1"></i></label>
+                </div>
+                <br/><br/>
+                <!-- This code creates a feedback form where users can submit their feedback by filling out a textarea and clicking the submit button.-->
+                <div class="feedback-form">
+                    <form >
+                        <h4>Feedback:</h4>
+                        <label for="review-comment"></label>
+                        <textarea id="review-comment" name="review-comment" placeholder="Add your feedback here.."></textarea>
+                    </form>
+                    <button id="review-sent">Submit</button>
+                    <div id="confirmationMessage"></div>
+                </div>
+            </div>
+        </section>
+        <!-- This code is creating the footer section of a webpage.It includes the logo, contact information, and a subscription form for the newsletter and magazine. -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section-about">
+                    <div class="logo=image">
+                        <img src="/assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" alt="" width="80px">
+                    </div>
+                    <p>MegaSpace website keeps the audience informed, and provides a platform where it shares information about space. Get the latest space exploration, innovation and astronomy news.</p>
+                    <div class="contact">
+                        <p style="font-size: larger; font-weight:bold;">Contact info: </p><br/>
+                        <i class="fa fa-phone"><span> 123-456-789</span></i><br/>
+                        <i class="fa fa-envelope"><span> info@MegSpace.com</span></i><br/>
+                        <i class="fa fa-map-marker"><span> 140 MegaSpce News, Central London</span></i><br/>
+                    </div>
+                </div>
+                <br/>
+                <div class="footer-section-contact-form">
+                    <h2 style="color:#ff105e; font-size:35px;">Subscribe to our newsletter and magazine!</h2>
+                    <p>Be at the forefront of knowledge, gaining exclusive access to vital, intriguing, and current global news updates.</p>
+                    <form class="newsletter-mail">
+                        <input type="email"  autocomplete="off" name="Email" placeholder="Your Email id" required>
+                        <button type="submit"><img src="/assets/images/icons8-send-24.png" width="13px"></button>
+                    </form>
+                </div>
+            </div>
+            <br/>
+            <div class="footer-bottom">
+                &copy; MegaSpace 2023 By Sunidhi Abhange
+                <br/><br/>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/" class="fa fa-instagram" style="color:black; text-decoration:none;"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-twitter" style="color:black; text-decoration:none;"></a>
+                    <a href="https://www.Youtube.com/" class="fa fa-youtube" style="color:black; text-decoration:none;"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="assets/script/main.js"></script>
+    <script src="assets/script/feedback-button.js"></script>
+</html>
