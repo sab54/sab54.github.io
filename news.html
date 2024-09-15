@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MegaSpace</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <!-- This code is using the `onload` event to call the `onload()` function when the webpage finishes loading for night mode. -->
+    <body onload="onload()">
+        <header>
+            <div class="popup" id="popup-box">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h3>Settings</h3>
+                    <fieldset>
+                        <legend>Prefences to User Screen</legend>
+                        <p>Dark/LightMode:</p><button class="container__btn" onclick="nightmode()">🌙/🌞</button>
+                        <br/><br/>
+                        <p>Font Change:</p><button class="container__btn" onclick="fontchange()">+/-</button>
+                    </fieldset>
+                </div>
+            </div>
+        </header>
+        <!-- This code is creating a navigation bar with a logo, menu icon when mobile version, 
+            and a list of links.The logo is a clickable image that takes you to the homepage. 
+            The menu icon represents a dropdown menu for the navigation links. Each link in the list corresponds 
+            to a different page on the website, such as "Home," "News," "Education," "Feedback," and "Subscribe."
+             There is also a "Report" link and a "Settings" button included in the navigation bar. -->
+        <nav>
+            <a class="logo" href="index.html"><img src="assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" width="120"/></a>
+            <div class="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link"><a href="news.html" class="first" >News</a></li>
+                <li class="nav-link"><a href="education.html">Education</a></li>
+                <li class="nav-link"><a href="feedback.html" >Feedback</a></li>
+                <li class="nav-link"><a href="subscribe.html">Subscribe</a></li>
+                <a class="fa fa-file" id="report" href="report.html"> Report</a>
+                <button class="fa fa-gear" onclick="togglePopup()"> Settings</button>
+            </ul>
+        </nav>
+        <section id="appearance">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <!-- This code creates a news container with tabs for different news articles. It includes a search bar and displays the headlines, dates, and images for each article when clicked on. different article when clicked on change lanuage it would change to spanish -->
+            <div class="news-container">
+                <div class="tabs">
+                    <div class="search-container">
+                        <i class="fa fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Search NEWS..." oninput="searchNews()">
+                    </div>
+                    <div class="tab" onclick="changeTab(1)">The Fury of Falling Meteors Ravages Earth.<br/> <time >Feb 2021  • 12:19 PM GMTs</time></div>
+                    <div class="tab" onclick="changeTab(2)">Black hole<br/><time>October 2022 • 11 PM GMT</time></div>
+                    <div class="tab" onclick="changeTab(3)">UFO Hearing from NASA<br/><time>May 2023</time></div>
+                    <div class="tab" onclick="changeTab(4)">Rocket mission :India<br/><time>July 2023</time></div>
+                    <div class="tab" onclick="changeTab(5)">First to walk on the moon<br/><time>Jul 1969</time></div>
+                    <div class="tab" onclick="changeTab(6)">First Rocket Launch<br/><time>March 1926</time></div>
+                    <div class="tab" onclick="changeTab(7)">Turkey-Syria earthquake<br/><time>February 2023</time></div>
+                </div>
+                <div class="content">
+                    <div class="tab-content" id="content1">
+                        <button id="switchLanguageButton">English - Spanish</button>
+                        <div id="englishContent">
+                            <h3>The Fury of Falling Meteors Ravages Earth.</h3>
+                            <img src="/assets/images/meteorite.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">After Three Decades, a unknown type meteorite which known as the  , originating from a fireball that illustrated the skies in Britain.The disintegrates of this unfamiliar meteorite  have been  located in Winchcombe,Gloucestershire, and now rest under the careful guardianship of esteemed museum scientists.After passing through the earth atmosphere, they   discovered and retrieved of a meteorite.The shots obtained from both the public and Britain's Alliance camera networks played a vital role in pinpointing the meteorite's location and establishing its source.
+                                <br/><br/> 
+                                <iframe width="70%" height="400px" src="https://www.youtube.com/embed/7JNBPRSV3po" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                <br/>
+                                Approximately 300g of the exceptional meteorite managed to endure the intense heat during its atmospheric passage and eventually landed on a driveway.Other portions of the meteorite have also been found in the local area since it was first spotted on February 28th.Professionals have observed that the original space rock was traveling at nearly 14 km/s before it inserted the Earth's exosphere. They are astonished with the prepare of the reclaimed meteorite.This esteemed scientist unravelled the enigma of a meteorite, believed to have originated from the early solar system, aptly named the carbon chondrite. Such meteorites are recognized for containing essential elements for life, such as organics and amino acids. Overall, it's a fascinating discovery that provides valuable insights into the study of space rocks and their journeys through the cosmos.
+                            </p>
+                        </div>
+                        <div id="spanishContent">
+                            <h3>La Furia de los Meteoritos que Caen Arrasa la Tierra.</h3>
+                            <img src="/assets/images/meteorite.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">Después de tres décadas, se descubrió un meteorito de tipo desconocido, conocido como el "nombre desconocido", que se originó a partir de una bola de fuego que iluminó los cielos de Gran Bretaña.Los restos de este meteorito desconocido se encuentran en Winchcombe, Gloucestershire, bajo la cuidadosa custodia de científicos de renombrados museos.Después de pasar a través de la atmósfera terrestre, descubrieron y recuperaron un meteorito. Las imágenes obtenidas tanto del público como de las redes de cámaras de la Alianza de Gran Bretaña desempeñaron un papel vital en localizar la ubicación del meteorito y establecer su origen.
+                                <br/><br/>
+                                <iframe width="70%" height="400px" src="https://www.youtube.com/embed/7JNBPRSV3po" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                <br/>
+                                Aproximadamente 300 g de este excepcional meteorito lograron resistir el intenso calor durante su paso atmosférico y finalmente aterrizaron en una entrada de vehículos. Desde que se avistó por primera vez el 28 de febrero, también se han encontrado otras partes del meteorito en la zona local. Los expertos han observado que la roca espacial original viajaba a casi 14 km/s antes de ingresar a la exosfera de la Tierra. Están asombrados con la preparación del meteorito recuperado. Este científico de renombre resolvió el enigma de un meteorito, que se cree que se originó en el sistema solar temprano, y fue adecuadamente llamado el condrito de carbono. Estos meteoritos son conocidos por contener elementos esenciales para la vida, como compuestos orgánicos y aminoácidos.En general, es un descubrimiento fascinante que proporciona información valiosa sobre el estudio de las rocas espaciales y sus viajes a través del cosmos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content2">
+                        <button id="switchLanguageButton">English - Spanish</button>
+                        <div id="englishContent">
+                            <h3>Black Hole</h3>
+                            <img src="/assets/images/Picture1.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">Black holes are fascinating and mysterious phenomena in space. They are regions in the universe where gravity is so strong that nothing, not even light, can escape their gravitational pull. These cosmic wonders have intrigued scientists and astronomers for decades.Black holes form when massive stars collapse under their own gravity after running out of fuel. As the star collapses, it becomes incredibly dense, creating a gravitational force that is so powerful that it warps the fabric of space and time around it. This distortion creates a region called the event horizon, which marks the point of no return. Anything that crosses the event horizon is trapped forever, swallowed by the black hole's immense gravitational force.One of the most fascinating aspects of black holes is their ability to distort time. According to Einstein's theory of general relativity, time slows down near a black hole due to the intense gravitational field. This phenomenon, known as time dilation, means that time passes more slowly for an object near a black hole compared to an object further away. It's mind-boggling to think about how time can be affected by such extreme gravitational forces.Black holes also have a profound impact on their surroundings. As matter falls into a black hole, it forms an accretion disk, a swirling disk of superheated gas and dust. This disk emits powerful jets of energy and radiation, making black holes some of the brightest objects in the universe.
+                                <br/><br/> 
+                                <iframe width="70%" height="400px" src="https://www.youtube.com/embed/AbBKE-RPyqw" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                Despite their immense gravitational pull, black holes are not cosmic vacuum cleaners that suck up everything in their path. They can coexist with other objects in space, such as stars and galaxies, without devouring them. However, if a star or object gets too close to a black hole, it can be torn apart by its tidal forces, creating a phenomenon called a tidal disruption event.While black holes are still shrouded in many mysteries, they play a crucial role in our understanding of the universe. They have been instrumental in shaping galaxies and are thought to be at the center of most galaxies, including our own Milky Way.Studying black holes is a challenging task due to their elusive nature. Scientists use various methods, including observing their effects on nearby objects and detecting the radiation emitted from their accretion disks, to learn more about these enigmatic cosmic entities.In conclusion, black holes are captivating and enigmatic cosmic phenomena that continue to intrigue scientists and astronomers. They are regions in space where gravity is so strong that nothing can escape their grasp. Understanding black holes is crucial for unraveling the mysteries of the universe and expanding our knowledge of the cosmos. 
+                                <br/>
+                            </p>
+                        </div>
+                        <div id="spanishContent">
+                            <h3>Agujero Negro</h3>
+                            <img src="/assets/images/Picture1.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">Los agujeros negros son fenómenos fascinantes y misteriosos en el espacio. Son regiones del universo donde la gravedad es tan fuerte que nada, Ni siquiera la luz puede escapar de su atracción gravitacional. Estas maravillas cósmicas han intrigado a científicos y astrónomos durante décadas.Negro Los agujeros se forman cuando estrellas masivas colapsan bajo su propia gravedad después de quedarse sin combustible. A medida que la estrella colapsa, se vuelve increíblemente denso, creando una fuerza gravitacional que es tan poderosa que deforma el tejido del espacio y el tiempo a su alrededor. Esta distorsión crea una región llamada horizonte de sucesos, que marca el punto de no retorno. Todo lo que cruza el horizonte de sucesos queda atrapado para siempre.tragado por la inmensa fuerza gravitacional del agujero negro. Uno de los aspectos más fascinantes de los agujeros negros es su capacidad para distorsionar el tiempo. Según la teoría de la relatividad general de Einstein, el tiempo se ralentiza cerca de un agujero negro debido a la intensa gravitación campo. Este fenómeno, conocido como dilatación del tiempo, significa que el tiempo pasa más lentamente para un objeto cerca de un agujero negro en comparación con un objeto más alejado. Es alucinante pensar en cómo el tiempo puede verse afectado por fuerzas gravitacionales tan extremas. Los agujeros negros también tienen un profundo impacto en su entorno. A medida que la materia cae en un agujero negro, forma un disco de acreción, un disco giratorio de gas y polvo sobrecalentados. Este disco emite potentes chorros de energía y radiación, lo que convierte a los agujeros negros en algunos de los objetos más brillantes del universo.
+                                <br><br>
+                                <iframe width="70%" height="400px" src="https://www.youtube.com/embed/AbBKE-RPyqw" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                A pesar de su inmensa fuerza gravitatoria, los agujeros negros no son aspiradoras cósmicas que absorben todo lo que se encuentran en su camino. Pueden coexistir con otros objetos en el espacio, como estrellas y galaxias, sin devorarlos. Sin embargo, si una estrella u objeto se acerca demasiado a un agujero negro, puede ser desgarrado por sus fuerzas de marea, creando un fenómeno llamado evento de disrupción de marea. Aunque los agujeros negros todavía están envueltos en muchos misterios, juegan un papel crucial en nuestra comprensión del universo. Han sido instrumentales en la formación de galaxias y se cree que están en el centro de la mayoría de ellas, incluyendo nuestra propia Vía Láctea. Estudiar los agujeros negros es una tarea desafiante debido a su naturaleza esquiva. Los científicos utilizan diversos métodos, como observar sus efectos sobre los objetos cercanos y detectar la radiación emitida por sus discos de acreción, para aprender más sobre estas enigmáticas entidades cósmicas. En conclusión, los agujeros negros son fenómenos cósmicos cautivadores y enigmáticos que siguen intrigando a los científicos y astrónomos. Son regiones en el espacio donde la gravedad es tan fuerte que nada puede escapar de su alcance. Entender los agujeros negros es crucial para desentrañar los misterios del universo y ampliar nuestro conocimiento del cosmos.
+                                <br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content3">
+                        <button id="switchLanguageButton">English - Spanish</button>
+                        <div id="englishContent">
+                            <h3>UFO Hearing from NASA</h3>
+                            <img src="/assets/images/6nb67fkc.png" style="width: 90%; padding-left: 15px;">
+                            <p id="text">UFO hearing is a term that refers to a public congressional hearing on UFOs, or unidentified flying objects, that are also known as UAPs, or unidentified anomalous phenomena. The last public UFO hearing was held in May 2022, before the release of a report by the U.S. intelligence community on the UAP phenomenon1. The hearing featured testimony from Pentagon officials, former military pilots, and scientists who discussed the nature and origin of the UAPs, and the challenges and opportunities for further investigation. In July 2023, another UFO hearing was held by a House Oversight subcommittee, where lawmakers and officials pushed for more transparency and funding for UAP research. The hearing also revealed some startling information, such as the existence of a Pentagon website that tracks UAP sightings around the world, and the claim that the government has possession of "nonhuman" biological matter that may be related to UAPs.
+                                <br/><br/>
+                                <iframe width="70%"height="400px" src="https://www.youtube.com/embed/nO15OSC0Q-4" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                UFOs are unidentified flying objects that are not easily explained by conventional means. They are often associated with the idea of extraterrestrial life visiting Earth, but they can also be caused by natural phenomena, human-made devices, or hoaxes.There have been many reported UFO sightings throughout history, some of which have been investigated by governments, scientists, or enthusiasts. Some of the most famous cases include the Roswell incident, the Phoenix lights, the Rendlesham Forest incident, and the Tic Tac encounter.UFOs have recently gained more attention due to the release of a report by the U.S. intelligence community in June 2021, which confirmed that there are some unexplained aerial phenomena (UAPs) that pose a potential threat to national security. The report also sparked more interest and funding for UAP research, as well as more public hearings and disclosures. 
+                                <br/><br/>
+                                UAPs are unidentified anomalous phenomena that are observed in the sky or near the Earth’s surface, and that cannot be easily explained by conventional means. They are sometimes also called unidentified aerial phenomena or unexplained aerial phenomena.UAPs are different from UFOs, which are usually assumed to be flying objects of some kind, such as aircraft, balloons, drones, or spacecraft. UAPs can include other types of phenomena, such as lights, shapes, sounds, or effects on the environment.UAPs have been studied by various governments, scientists, and organizations, who have different theories and hypotheses about their nature and origin. Some of the possible explanations include atmospheric phenomena, optical illusions, human-made devices, secret projects, or extraterrestrial intelligence.
+                            </p>
+                        </div>
+                        <div id="spanishContent">
+                            <h3>Audiencia OVNI de la NASA</h3>
+                            <img src="/assets/images/6nb67fkc.png" style="width: 90%; padding-left: 15px;">
+                            <p id="text">
+                                Audiencia OVNI es un término que se refiere a una audiencia pública del Congreso sobre OVNIs u objetos voladores no identificados, que también se conocen como UAP o fenómenos anómalos no identificados. La última audiencia pública sobre ovnis se celebró en mayo de 2022, antes de la publicación de un informe de la comunidad de inteligencia estadounidense sobre el fenómeno UAP1. La audiencia contó con testimonios de funcionarios del Pentágono, ex pilotos militares y científicos que discutieron la naturaleza y el origen de los UAP, y los desafíos y oportunidades para una mayor investigación. En julio de 2023, un subcomité de Supervisión de la Cámara de Representantes celebró otra audiencia sobre ovnis, donde legisladores y funcionarios presionaron para obtener más transparencia y financiación para la investigación de UAP. La audiencia también reveló información sorprendente, como la existencia de un sitio web del Pentágono que rastrea los avistamientos de UAP en todo el mundo y la afirmación de que el gobierno tiene posesión de materia biológica "no humana" que puede estar relacionada con los UAP.
+                                <br/><br/>
+                                <iframe width="70%" height="400px"src="https://www.youtube.com/embed/nO15OSC0Q-4" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                Los ovnis son objetos voladores no identificados que no se explican fácilmente por medios convencionales. A menudo se asocian con la idea de que vida extraterrestre visite la Tierra, pero también pueden ser causados ​​por fenómenos naturales, dispositivos fabricados por humanos o engaños. A lo largo de la historia se han reportado muchos avistamientos de ovnis, algunos de los cuales han sido investigados por gobiernos, científicos o entusiastas. Algunos de los casos más famosos incluyen el incidente de Roswell, las luces de Phoenix, el incidente del bosque de Rendlesham y el encuentro de Tic Tac. Recientemente, los ovnis han ganado más atención debido a la publicación de un informe de la comunidad de inteligencia de EE. UU. en junio de 2021, que confirmó que existen algunos fenómenos aéreos inexplicables (UAP) que representan una amenaza potencial para la seguridad nacional. El informe también generó más interés y financiación para la investigación de UAP, así como más audiencias públicas y divulgaciones.
+                                <br/><br/>
+                                UAPs are unidentified anomalous phenomena that are observed in the sky or near the Earth’s surface, and that cannot be easily explained by conventional means. They are sometimes also called unidentified aerial phenomena or unexplained aerial phenomena.UAPs are different from UFOs, which are usually assumed to be flying objects of some kind, such as aircraft, balloons, drones, or spacecraft. UAPs can include other types of phenomena, such as lights, shapes, sounds, or effects on the environment.UAPs have been studied by various governments, scientists, and organizations, who have different theories and hypotheses about their nature and origin. Some of the possible explanations include atmospheric phenomena, optical illusions, human-made devices, secret projects, or extraterrestrial intelligence. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content4">
+                        <button id="switchLanguageButton">English - Spanish</button>
+                        <div id="englishContent">
+                            <h3>Rocket mission :India</h3>
+                            <img src="/assets/images/indias-moon rocket.jpeg"style="width: 90%; padding-left: 15px;">
+                            <p id="text">Chandrayaan-3, also known as the "moon craft" in Sanskrit, was indeed a highly anticipated mission by the Indian Space Research Organisation (ISRO).It was launched on 14 July 2023 from Satish Dhawan Space Centre in India, using an LVM3-M4 rocket with the primary goals of achieving a safe and gentle landing on the moon's surface, conducting rover operations, and conducting scientific experiments. If a significant amount of water ice is discovered, it could potentially pave the way for future crew missions to establish a lunar base. 
+                                <br/><br/> 
+                                <iframe width="70%"height="400px" src="https://www.youtube.com/embed/QQKSASFdoDw" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                <br/>Water ice is valuable as it can be used to extract oxygen and fuel, which are essential for sustaining human presence. Many scientists believe that the moon's south pole, hidden from Earth's view and characterized by craters and trenches, holds great potential as a location for a future lunar base.It entered lunar orbit on 5 August 2023, and the lander separated from the orbiter on 22 August 2023.The lander, named Vikram, carried a rover, named Pragyaan, which weighs 26 kg and has six wheels The lander touched down near the lunar south polar region on 23 August 2023 at 12:33 UTC, making India the fourth country to successfully land on the Moon, and the first to do so near the region of the lunar south pole.The mission’s objectives are to demonstrate end-to-end landing and roving capabilities, and to conduct scientific measurements on the lunar surface and from orbit.
+                            </p>
+                        </div>
+                        <div id="spanishContent">
+                            <h3>Misión de cohete: India</h3>
+                            <img src="/assets/images/indias-moon rocket.jpeg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">
+                                Chandrayaan-3, también conocida como "nave lunar" en sánscrito, fue de hecho una misión muy esperada por la Organización de Investigación Espacial de la India (ISRO). Fue lanzada el 14 de julio de 2023 desde el Centro Espacial Satish Dhawan en India, utilizando un LVM3- Cohete M4 cuyo objetivo principal es lograr un aterrizaje suave y seguro en la superficie de la luna, realizar operaciones de rover y realizar experimentos científicos. Si se descubre una cantidad significativa de hielo de agua, podría allanar el camino para futuras misiones tripuladas para establecer una base lunar.
+                                <br/><br/>
+                                <iframe width="70%"height="400px" src="https://www.youtube.com/embed/QQKSASFdoDw" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br//>
+                                El hielo de agua es valioso porque puede utilizarse para extraer oxígeno y combustible, que son esenciales para sustentar la presencia humana. Muchos científicos creen que el polo sur de la Luna, oculto a la vista de la Tierra y caracterizado por cráteres y trincheras, tiene un gran potencial como ubicación para una futura base lunar. Entró en órbita lunar el 5 de agosto de 2023 y el módulo de aterrizaje se separó del orbitador el 22. Agosto de 2023. El módulo de aterrizaje, llamado Vikram, llevaba un rover, llamado Pragyaan, que pesa 26 kg y tiene seis ruedas. El módulo de aterrizaje aterrizó cerca de la región lunar del polo sur el 23 de agosto de 2023 a las 12:33 UTC, lo que convirtió a la India en el cuarto país en aterrizará con éxito en la Luna, y será el primero en hacerlo cerca de la región del polo sur lunar. Los objetivos de la misión son demostrar capacidades de aterrizaje y desplazamiento de extremo a extremo, y realizar mediciones científicas en la superficie lunar y desde la órbita.
+                                <br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content5">
+                        <button id="switchLanguageButton">English - Spanish</button>
+                        <div id="englishContent">
+                            <h3>First to walk on the moon</h3>
+                            <img src="/assets/images/history-in-hd-e5eDHbmHprg-unsplash.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">The first person to walk on the moon was Neil Armstrong, an American astronaut and aeronautical engineer. He was the commander of the Apollo 11 mission, which landed on the moon on July 20, 1969.He was accompanied by Buzz Aldrin, who was the second person to walk on the moon. They spent about three hours on the lunar surface, conducting experiments, collecting samples, planting a flag, a and leaving a plaque.They were followed by 10 more astronauts who walked on the moon in subsequent Apollo missions, until the last one in 1972. The total number of people who have walked on the moon is 12, and four of them are still alive as of 2023. 
+                                <br/><br/>
+                                <iframe width="70%"height="400px" src="https://www.youtube.com/embed/6VDyvXWIbQo" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                The rocket that was used for Apollo 11 was the Saturn V, which was the most powerful rocket ever built at the time. It had three stages, each with its own engines and fuel tanks. The first stage had five F-1 engines that produced a total thrust of 7.5 million poundsThe Saturn V rocket launched Apollo 11 from Kennedy Space Center in Florida on July 16, 1969, at 9:32 a.m. EDT. It took about 12 minutes to reach orbit, and then the third stage fired again to send the spacecraft to the moon.The Saturn V rocket was used for all the Apollo missions to the moon, as well as the Skylab space station and the Apollo-Soyuz Test Project. It was retired in 1973, after 13 successful launches. 
+                                <br/>
+                            </p>
+                        </div>
+                        <div id="spanishContent">
+                            <h3>Primero en caminar sobre la luna</h3>
+                            <img src="/assets/images/history-in-hd-e5eDHbmHprg-unsplash.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">
+                                La primera persona en caminar sobre la luna fue Neil Armstrong, un astronauta e ingeniero aeronáutico estadounidense. Fue el comandante de la misión Apolo 11, que alunizó el 20 de julio de 1969. Lo acompañó Buzz Aldrin, quien fue la segunda persona en caminar sobre la luna. Pasaron unas tres horas en la superficie lunar, realizando experimentos, recogiendo muestras, plantando una bandera, una y dejando una placa. Les siguieron 10 astronautas más que caminaron sobre la Luna en posteriores misiones Apolo, hasta la última en 1972. El número total de personas que han caminado sobre la luna es 12, y cuatro de ellas siguen vivas en 2023.
+                                <br/><br/>
+                                <iframe width="70%"height="400px" src="https://www.youtube.com/embed/6VDyvXWIbQo" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                El cohete que se utilizó para el Apolo 11 fue el Saturn V, que fue el cohete más poderoso jamás construido en ese momento. Tenía tres etapas, cada una con sus propios motores y tanques de combustible. La primera etapa tenía cinco motores F-1 que producían un empuje total de 7,5 millones de libras. El cohete Saturn V lanzó el Apolo 11 desde el Centro Espacial Kennedy en Florida el 16 de julio de 1969, a las 9:32 a.m.EDT. Tardó unos 12 minutos en alcanzar la órbita, y luego la tercera etapa se disparó nuevamente para enviar la nave espacial a la luna. El cohete Saturn V se utilizó para todas las misiones Apolo a la luna, así como para la estación espacial Skylab y el Apolo- Proyecto de prueba Soyuz. Fue retirado en 1973, después de 13 lanzamientos exitosos.
+                                <br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content6">
+                        <button id="switchLanguageButton">English - Spanish</button>
+                        <div id="englishContent">
+                            <h3>First rocket launch</h3>
+                            <img src="/assets/images/first-rocket-launch.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">
+                                Liquid-fueled rocket, it is credited to Dr. Robert H. Goddard, an American physicist and engineer who is considered the father of modern rocketry. He successfully launched a small rocket powered by liquid oxygen and gasoline on March 16, 1926, in Auburn, Massachusetts. The rocket flew for about 2.5 seconds, reached a height of 12.5 meters, and landed 56 meters away.Liquid-fueled rockets are rockets that use a liquid fuel and a liquid oxidizer to produce thrust. They have several advantages over solid-fueled rockets, such as being able to control the thrust level, stop and restart the engine, and store the propellants at lower pressures.However, they also have some disadvantages, such as being more complex, requiring pumps and pipes, and having lower density and higher cost than solid fuels.
+                                <iframe width="70%"height="400px"src="https://www.youtube.com/embed/j7bSW1vKcFg" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                <br/><br/>
+                                Some examples of liquid fuels are liquid hydrogen, liquid oxygen, kerosene, ethanol, and methane.Different combinations of fuels and oxidizers have different performance characteristics, such as specific impulse, thrust-to-weight ratio, and combustion temperature.
+                                <br/>
+                            </p>
+                        </div>
+                        <div id="spanishContent">
+                            <h3>Primer lanzamiento de cohete</h3>
+                            <img src="/assets/images/first-rocket-launch.jpg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">
+                                Cohete de combustible líquido, se le atribuye al Dr. Robert H. Goddard, un físico e ingeniero estadounidense considerado el padre de los cohetes modernos. Lanzó con éxito un pequeño cohete propulsado por oxígeno líquido y gasolina el 16 de marzo de 1926 en Auburn, Massachusetts. El cohete voló durante unos 2,5 segundos, alcanzó una altura de 12,5 metros y aterrizó a 56 metros de distancia. Los cohetes de combustible líquido son cohetes que utilizan un combustible líquido y un oxidante líquido para producir empuje. Tienen varias ventajas sobre los cohetes de combustible sólido, como la capacidad de controlar el nivel de empuje, detener y reiniciar el motor y almacenar los propulsores a presiones más bajas. Sin embargo, también tienen algunas desventajas, como ser más complejos, requerir bombas y tuberías, y tener menor densidad y mayor costo que los combustibles sólidos.
+                                <iframe width="70%"height="400px"src="https://www.youtube.com/embed/j7bSW1vKcFg" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                <br/><br/>
+                                Algunos ejemplos de combustibles líquidos son el hidrógeno líquido, el oxígeno líquido, el queroseno, el etanol y el metano. Diferentes combinaciones de combustibles y oxidantes tienen diferentes características de rendimiento, como impulso específico, relación empuje-peso y temperatura de combustión.
+                                <br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content7">
+                        <button id="switchLanguageButton">English - Spanish</button>
+                        <div id="englishContent">
+                            <h3>Turkey-Syria earthquake</h3>
+                            <img src="/assets/images/TurkeySyria earthquake.jpeg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">The earthquake that struck southern and central Turkey, along with parts of Syria on February 6, 2023, was a devastating event. It was followed by another powerful earthquake with a magnitude of 7.7 on the same day, making it one of the strongest earthquakes recorded in the Levant region. This seismic activity was attributed to the movement along specific faults in the area.The aftermath of the earthquake was marked by significant challenges, including damaged infrastructure, winter storms, and communication disruptions, which hindered rescue and relief efforts. Nonetheless, a dedicated team of 60,000 search-and-rescue personnel, 5,000 health workers, and 30,000 volunteers worked tirelessly to provide assistance to those in need.
+                                <br/><br/>
+                                <iframe width="70%"height="400px"src="https://www.youtube.com/embed/0jZE4p1SOvg" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                <br/>
+                                In response to Turkey's call for international help, an astounding 141,000 individuals from 94 countries joined the rescue efforts, demonstrating global solidarity in times of crisis.The geological context of the region where central southern Turkey and northwestern Syria are situated involves the interaction of three tectonic plates: the African Plate, Arabian Plate, and Anatolian Plate. The Dead Sea Transform, a significant left-lateral strike-slip fault, marks the boundary between the African and Arabian plates and facilitates the northward movement of the Arabian Plate in relation to Africa. The East Anatolian Fault, another major left-lateral strike-slip fault, connects with the northern end of the Dead Sea Transform and accommodates the westward movement of the Anatolian Plate. These two faults meet at the Marash Triple Junction. The East Anatolian Fault extends further west, forming the boundary between the African and Anatolian plates and connects to the Cyprus arc through the Latakia Ridge. This complex tectonic setting makes the region prone to seismic activity.
+                            </p>
+                        </div>
+                        <div id="spanishContent">
+                            <h3>Terremoto Turquía-Siria</h3>
+                            <img src="/assets/images/TurkeySyria earthquake.jpeg" style="width: 90%; padding-left: 15px;">
+                            <p id="text">
+                                El terremoto que sacudió el sur y el centro de Turquía, junto con partes de Siria, el 6 de febrero de 2023, fue un acontecimiento devastador. El mismo día le siguió otro potente terremoto de magnitud 7,7, lo que lo convierte en uno de los terremotos más fuertes registrados en la región de Levante. Esta actividad sísmica se atribuyó al movimiento a lo largo de fallas específicas en el área. Las secuelas del terremoto estuvieron marcadas por desafíos importantes, incluidos daños a la infraestructura, tormentas invernales e interrupciones en las comunicaciones, que obstaculizaron los esfuerzos de rescate y socorro. No obstante, un equipo dedicado de 60.000 miembros del personal de búsqueda y rescate, 5.000 trabajadores de la salud y 30.000 voluntarios trabajaron incansablemente para brindar asistencia a los necesitados.
+                                <br/><br/>
+                                <iframe width="70%"height="400px"src="https://www.youtube.com/embed/0jZE4p1SOvg" frameborder="0"  loading="lazy" class="rounded-top-4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                                En respuesta al llamado de Turquía a la ayuda internacional, una asombrosa cantidad de 141.000 personas de 94 países se unieron a los esfuerzos de rescate, demostrando solidaridad global en tiempos de crisis. El contexto geológico de la región donde se encuentran el centro sur de Turquía y el noroeste de Siria implica la interacción de tres tectónicos. placas: la Placa Africana, la Placa Arábiga y la Placa de Anatolia. La Transformada del Mar Muerto, una importante falla de deslizamiento lateral izquierdo, marca el límite entre las placas africana y árabe y facilita el movimiento hacia el norte de la placa árabe en relación con África. La Falla de Anatolia Oriental, otra importante falla de rumbo lateral izquierdo, se conecta con el extremo norte de la Transformada del Mar Muerto y acomoda el movimiento hacia el oeste de la Placa de Anatolia. Estas dos fallas se encuentran en Marash Triple Junction. La falla de Anatolia Oriental se extiende más hacia el oeste, formando el límite entre las placas africana y de Anatolia y se conecta con el arco de Chipre a través de la cresta de Latakia. Este complejo entorno tectónico hace que la región sea propensa a la actividad sísmica.
+                                <br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- This code creates a review section where users can input their name and comment, and then post it by clicking the "Post" button. The reviews will be displayed below the input section. -->
+            <div class="review-news">
+                User:<input id="nameInput" type="text" placeholder="Name"><br/>
+                Commenting:<input id="commentInput" type="text" placeholder="comment">
+                <button onclick="addReview()">Post</button>
+                <div id="reviews"></div>
+            </div>
+        </section>
+        <!-- This code is creating the footer section of a webpage.It includes the logo, contact information, and a subscription form for the newsletter and magazine. -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section-about">
+                    <div class="logo=image">
+                        <img src="/assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" alt="" width="80px">
+                    </div>
+                    <p>MegaSpace website keeps the audience informed, and provides a platform where it shares information about space. Get the latest space exploration, innovation and astronomy news. </p>
+                    <div class="contact">
+                        <p style="font-size: larger; font-weight:bold;">Contact info: </p><br/>
+                        <i class="fa fa-phone"><span> 123-456-789</span></i><br/>
+                        <i class="fa fa-envelope"><span> info@MegSpace.com</span></i><br/>
+                        <i class="fa fa-map-marker"><span> 140 MegaSpce News, Central London</span></i><br/>
+                    </div>
+                </div>
+                <br/>
+                <div class="footer-section-contact-form">
+                    <h2 style="color:#ff105e; font-size:35px;">Subscribe to our newsletter and magazine!</h2>
+                    <p>Be at the forefront of knowledge, gaining exclusive access to vital, intriguing, and current global news updates.</p>
+                    <form class="newsletter-mail">
+                        <input type="email"  autocomplete="off" name="Email" placeholder="Your Email id" required>
+                        <button type="submit"><img src="/assets/images/icons8-send-24.png" width="13px"></button>
+                    </form>
+                </div>
+            </div>
+            <br/>
+            <div class="footer-bottom">
+                &copy; MegaSpace 2023 By Sunidhi Abhange
+                <br/><br/>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/" class="fa fa-instagram" style="color:black; text-decoration:none;"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-twitter" style="color:black; text-decoration:none;"></a>
+                    <a href="https://www.Youtube.com/" class="fa fa-youtube" style="color:black; text-decoration:none;"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="assets/script/main.js"></script>
+    <script src="assets/script/news.js"></script>
+</html>

@@ -1,283 +1,254 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MegaSpace</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<!-- This code is using the `onload` event to call the `onload()` function when the webpage finishes loading for night mode. -->
-
-<body onload="onload()">
-    <header>
-        <!-- This code creates a popup box on a webpage header.
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MegaSpace</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <!-- This code is using the `onload` event to call the `onload()` function when the webpage finishes loading for night mode. -->
+    <body onload="onload()">
+        <header>
+            <!-- This code creates a popup box on a webpage header.
                 It contains options for the user to change the display preferences,
-                such as toggling between night and light mode and changing the font size.
+                such as toggling between night and light mode and changing the font size. 
                 The popup box can be closed by clicking on the close button. -->
-        <div class="popup" id="popup-box">
-            <div class="overlay"></div>
-            <div class="content">
-                <div class="close-btn" onclick="togglePopup()">&times;</div>
-                <h3>Display</h3>
-                <fieldset>
-                    <legend>Prefences to User Screen</legend>
-                    <p>Dark/LightMode:</p><button class="container__btn"
-                        onclick="nightmode()">🌙/🌞</button><br /><br />
-                    <p>Font Change:</p><button class="container__btn" onclick="fontchange()">+/-</button>
-                </fieldset>
-            </div>
-        </div>
-    </header>
-    <!-- This code is creating a navigation bar with a logo, menu icon when mobile version, and a list of links.
+                <div class="popup" id="popup-box">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup()">&times;</div>
+                        <h3>Display</h3>
+                        <fieldset>
+                            <legend>Prefences to User Screen</legend>
+                            <p>Dark/LightMode:</p><button class="container__btn" onclick="nightmode()">🌙/🌞</button><br/><br/>
+                            <p>Font Change:</p><button class="container__btn" onclick="fontchange()">+/-</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </header>
+            <!-- This code is creating a navigation bar with a logo, menu icon when mobile version, and a list of links.
                 The logo is a clickable image that takes you to the homepage. The menu icon represents
                 a dropdown menu for the navigation links. Each link in the list corresponds to a different
                 page on the website, such as "Home," "News," "Education," "Feedback," and "Subscribe."
                 There is also a "Report" link and a "Settings" button included in the navigation bar. -->
-    <nav>
-        <a class="logo" href="index.html"><img
-                src="images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" width="120" /></a>
-        <div class="bars">
-            <i class="fa fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li class="nav-link"><a href="index.html" class="first">Home</a></li>
-            <li class="nav-link"><a href="news.html">News</a></li>
-            <li class="nav-link"><a href="education.html">Education</a></li>
-            <li class="nav-link"><a href="feedback.html">Feedback</a></li>
-            <li class="nav-link"><a href="subscribe.html">Subscribe</a></li>
-            <button class="fa fa-gear" onclick="togglePopup()"> Settings</button>
-        </ul>
-    </nav>
-    <br />
-    <!-- this code creates a section in body and change the font size for the id  = appearance -->
-    <section id="appearance">
-        <!-- This code creates a button with the text "Top" that, when clicked, triggers the
+                <nav>
+                    <a class="logo" href="index.html"><img src="assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" width="120"/></a>
+                    <div class="bars">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li class="nav-link"><a href="index.html" class="first">Home</a></li>
+                        <li class="nav-link"><a href="news.html">News</a></li>
+                        <li class="nav-link"><a href="education.html">Education</a></li>
+                        <li class="nav-link"><a href="feedback.html">Feedback</a></li>
+                        <li class="nav-link"><a href="subscribe.html">Subscribe</a></li>
+                        <a class="fa fa-file" id="report" href="report.html"> Report</a>
+                        <button class="fa fa-gear" onclick="togglePopup()" > Settings</button>
+                    </ul>
+                </nav>
+                <br/>
+                <!-- this code creates a section in body and change the font size for the id  = appearance -->
+                <section id="appearance">
+                    <!-- This code creates a button with the text "Top" that, when clicked, triggers the
                         `topFunction()` function. The `topFunction()` function is responsible for scrolling the page to the top. -->
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-        <!-- This code creates a slider container with two slides. Each slide contains a text container with a headline,
+                        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                        <!-- This code creates a slider container with two slides. Each slide contains a text container with a headline,
                             date, and a link to a news article. There's also an image container with an image related to the news article.-->
-        <div class="home-container">
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="container-1">
-                            <div class="text-container">
-                                <a href="news.html">
-                                    <h2>The Fury of Falling Meteors Ravages Earth.</h2>
-                                </a><br />
-                                <time style="color: #ff105e; font-size: 20px;">Feb 2021</time><br /><br />
-                                <a href="https://www.bbc.co.uk/newsround/65074273"
-                                    style="color: white; font-size: 15px;">photo By:- bbc.com</a>
+                            <div class="home-container">
+                                <div class="slider-container">
+                                    <div class="slider">
+                                        <div class="slide">
+                                            <div class="container-1">
+                                                <div class="text-container">
+                                                    <a href="news.html"><h2>The Fury of Falling Meteors Ravages Earth.</h2></a><br/>
+                                                    <time style="color: #ff105e; font-size: 20px;">Feb 2021</time><br/><br/>
+                                                    <a href="https://www.bbc.co.uk/newsround/65074273" style="color: white; font-size: 15px;">photo By:- bbc.com</a>
+                                                </div>
+                                                <div class="image-container">
+                                                    <a href="news.html"><img src="/assets/images/metoroids.jpg"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="container-1">
+                                                <div class="text-container">
+                                                    <a href="news.html"><h2>First to walk on the moon.</h2></a><br/>
+                                                    <time style="color: #ff105e; font-size: 20px;">Jul 1969</time><br/><br/>
+                                                    <a href="https://in.mashable.com/science/29896/you-can-be-a-part-of-the-nasa-artemis-1-moon-mission-heres-how" style="color: white; font-size: 15px;">photo By:- in.mashable.com</a>
+                                                </div>
+                                                <div class="image-container">
+                                                    <a href="news.html"><img src="/assets/images/history-in-hd-e5eDHbmHprg-unsplash.jpg"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide">
+                                            <div class="container-1">
+                                                <div class="text-container">
+                                                    <a href="news.html"><h2>Turkey-Syria earthquake.</h2></a><br/>
+                                                    <time style="color: #ff105e; font-size: 20px;">February 2023</time><br/><br/>
+                                                    <a href="https://www.nbcnews.com/news/world/turkey-earthquake-rescue-efforts-boy-pulled-from-rubble-father-rcna69661" style="color: white; font-size: 15px;">photo By:- nbcnews.com</a>
+                                                </div>
+                                                <div class="image-container">
+                                                    <a href="news.html"><img src="/assets/images/TurkeySyria earthquake.jpeg"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="prev-btn"><</button>
+                                    <button class="next-btn">></button>
+                                </div>
                             </div>
-                            <div class="image-container">
-                                <a href="news.html"><img src="/images/metoroids.jpg"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="container-1">
-                            <div class="text-container">
-                                <a href="news.html">
-                                    <h2>First to walk on the moon.</h2>
-                                </a><br />
-                                <time style="color: #ff105e; font-size: 20px;">Jul 1969</time><br /><br />
-                                <a href="https://in.mashable.com/science/29896/you-can-be-a-part-of-the-nasa-artemis-1-moon-mission-heres-how"
-                                    style="color: white; font-size: 15px;">photo By:- in.mashable.com</a>
-                            </div>
-                            <div class="image-container">
-                                <a href="news.html"><img src="/images/history-in-hd-e5eDHbmHprg-unsplash.jpg"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="container-1">
-                            <div class="text-container">
-                                <a href="news.html">
-                                    <h2>Turkey-Syria earthquake.</h2>
-                                </a><br />
-                                <time style="color: #ff105e; font-size: 20px;">February 2023</time><br /><br />
-                                <a href="https://www.nbcnews.com/news/world/turkey-earthquake-rescue-efforts-boy-pulled-from-rubble-father-rcna69661"
-                                    style="color: white; font-size: 15px;">photo By:- nbcnews.com</a>
-                            </div>
-                            <div class="image-container">
-                                <a href="news.html"><img src="/images/TurkeySyria earthquake.jpeg"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="prev-btn"><</button>
-                <button class="next-btn">></button>
-            </div>
-        </div>
-        <!-- The code represents a section on a webpage that displays cards with
+                            <!-- The code represents a section on a webpage that displays cards with 
                                 images, titles, dates, and likes/dislikes. Each card has a container with details and a summary
                                 that can be expanded. And button (more) after 3 cards-->
-        <div class="filter">
-            <div class="cards">
-                <div class="card">
-                    <img src="/images/6nb67fkc.png" style="width:100%">
-                    <div class="container">
-                        <details>
-                            <summary> <a href="news.html">
-                                    <h3>Black hole</h3>
-                                </a></summary>
-                        </details>
-                    </div>
-                    <hr>
-                    <time>October 2022</time>
-                    <div class="likes-dislikes">
-                        <i class="fa fa-thumbs-up"></i>
-                        <span class="count">0</span>
-                        <i class="fa fa-thumbs-down"></i>
-                        <span class="coun">0</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/Picture1.jpg" style="width:100%">
-                    <div class="container">
-                        <details>
-                            <summary><a href="news.html">
-                                    <h3>UFO Hearing from NASA</h3>
-                                </a></summary>
-                            <p>Have we thought we are only one in the universe?</p>
-                        </details>
-                    </div>
-                    <hr>
-                    <time>May 2023</time>
-                    <div class="likes-dislikes">
-                        <i class="fa fa-thumbs-up"></i>
-                        <span class="count">0</span>
-                        <i class="fa fa-thumbs-down"></i>
-                        <span class="coun">0</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/indias-moon rocket.jpeg" style="width:100%">
-                    <div class="container">
-                        <details>
-                            <summary><a href="news.html">
-                                    <h3>Rocket mission :India</h3>
-                                </a></summary>
-                            <p>India has achieved a remarkable milestone by becoming the first country to land on the
-                                moon's south pole. 🚀</p>
-                        </details>
-                    </div>
-                    <hr>
-                    <time>July 2023</time>
-                    <div class="likes-dislikes">
-                        <i class="fa fa-thumbs-up"></i>
-                        <span class="count">0</span>
-                        <i class="fa fa-thumbs-down"></i>
-                        <span class="coun">0</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/history-in-hd-e5eDHbmHprg-unsplash.jpg" style="width:100%">
-                    <div class="container">
-                        <details>
-                            <summary><a href="news.html">
-                                    <h3>First to walk on the moon</h3>
-                                </a></summary>
-                        </details>
-                    </div>
-                    <hr>
-                    <time>Jul 1969</time>
-                    <div class="likes-dislikes">
-                        <i class="fa fa-thumbs-up"></i>
-                        <span class="count">0</span>
-                        <i class="fa fa-thumbs-down"></i>
-                        <span class="coun">0</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/first-rocket-launch.jpg" style="width:100%">
-                    <div class="container">
-                        <details>
-                            <summary><a href="news.html">
-                                    <h3>First Rocket Launch</h3>
-                                </a></summary>
-                            <p>After Three Decades, a unknown type meteorite...</p>
-                        </details>
-                    </div>
-                    <hr>
-                    <time>March 1926</time>
-                    <div class="likes-dislikes">
-                        <i class="fa fa-thumbs-up"></i>
-                        <span class="count">0</span>
-                        <i class="fa fa-thumbs-down"></i>
-                        <span class="coun">0</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/TurkeySyria earthquake.jpeg" style="width:100%">
-                    <div class="container">
-                        <details>
-                            <summary><a href="news.html">
-                                    <h3>Turkey-Syria earthquake</h3>
-                                </a></summary>
-                        </details>
-                    </div>
-                    <hr>
-                    <time>February 2023</time>
-                    <div class="likes-dislikes">
-                        <i class="fa fa-thumbs-up"></i>
-                        <span class="count">0</span>
-                        <i class="fa fa-thumbs-down"></i>
-                        <span class="coun">0</span>
-                    </div>
-                </div>
-            </div>
-            <button id="load-more">More...</button>
-        </div>
-        <br />
-    </section>
-    <!-- This code is creating the footer section of a webpage.
+                                <div class="filter">
+                                    <div class="cards">
+                                        <div class="card">
+                                            <img src="/assets/images/6nb67fkc.png"  style="width:100%">
+                                            <div class="container">
+                                                <details>
+                                                    <summary> <a href="news.html"><h3>Black hole</h3></a></summary>
+                                                </details>
+                                            </div>
+                                            <hr>
+                                            <time>October 2022</time>
+                                            <div class="likes-dislikes">
+                                                <i class="fa fa-thumbs-up"></i>
+                                                <span class="count">0</span>
+                                                <i class="fa fa-thumbs-down"></i>
+                                                <span class="coun">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="/assets/images/Picture1.jpg"  style="width:100%">
+                                            <div class="container">
+                                                <details>
+                                                    <summary><a href="news.html"><h3>UFO Hearing from NASA</h3></a></summary>
+                                                    <p>Have we thought we are only one in the universe?</p>
+                                                </details>
+                                            </div>
+                                            <hr>
+                                            <time>May 2023</time>
+                                            <div class="likes-dislikes">
+                                                <i class="fa fa-thumbs-up"></i>
+                                                <span class="count">0</span>
+                                                <i class="fa fa-thumbs-down"></i>
+                                                <span class="coun">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="/assets/images/indias-moon rocket.jpeg"  style="width:100%">
+                                            <div class="container">
+                                                <details>
+                                                    <summary><a href="news.html"><h3>Rocket mission :India</h3></a></summary>
+                                                    <p>India has achieved a remarkable milestone by becoming the first country to land on the moon's south pole. 🚀</p>
+                                                </details>
+                                            </div>
+                                            <hr>
+                                            <time>July 2023</time>
+                                            <div class="likes-dislikes">
+                                                <i class="fa fa-thumbs-up"></i>
+                                                <span class="count">0</span>
+                                                <i class="fa fa-thumbs-down"></i>
+                                                <span class="coun">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="/assets/images/history-in-hd-e5eDHbmHprg-unsplash.jpg"  style="width:100%">
+                                            <div class="container">
+                                                <details>
+                                                    <summary><a href="news.html"><h3>First to walk on the moon</h3></a></summary>
+                                                </details>
+                                            </div>
+                                            <hr>
+                                            <time>Jul 1969</time>
+                                            <div class="likes-dislikes">
+                                                <i class="fa fa-thumbs-up"></i>
+                                                <span class="count">0</span>
+                                                <i class="fa fa-thumbs-down"></i>
+                                                <span class="coun">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="/assets/images/first-rocket-launch.jpg" style="width:100%">
+                                            <div class="container">
+                                                <details>
+                                                    <summary><a href="news.html"><h3>First Rocket Launch</h3></a></summary>
+                                                    <p>After Three Decades, a unknown type meteorite...</p>
+                                                </details>
+                                            </div>
+                                            <hr>
+                                            <time>March 1926</time>
+                                            <div class="likes-dislikes">
+                                                <i class="fa fa-thumbs-up"></i>
+                                                <span class="count">0</span>
+                                                <i class="fa fa-thumbs-down"></i>
+                                                <span class="coun">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="/assets/images/TurkeySyria earthquake.jpeg" style="width:100%">
+                                            <div class="container">
+                                                <details>
+                                                    <summary><a href="news.html"><h3>Turkey-Syria earthquake</h3></a></summary>
+                                                </details>
+                                            </div>
+                                            <hr>
+                                            <time>February 2023</time>
+                                            <div class="likes-dislikes">
+                                                <i class="fa fa-thumbs-up"></i>
+                                                <span class="count">0</span>
+                                                <i class="fa fa-thumbs-down"></i>
+                                                <span class="coun">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="load-more" >More...</button>
+                                </div>
+                                <br/>
+                 </section>
+                 <!-- This code is creating the footer section of a webpage.
                     It includes the logo, contact information, and a subscription form for the newsletter and magazine. -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section-about">
-                <div class="logo=image">
-                    <img src="/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" alt=""
-                        width="80px">
-                </div>
-                <p>MegaSpace website keeps the audience informed, and provides a platform where it shares information
-                    about space.Get the latest space exploration, innovation and astronomy news. </p>
-                <div class="contact">
-                    <p style="font-size: larger; font-weight:bold;">Contact info: </p><br />
-                    <i class="fa fa-phone"><span> 123-456-789</span></i><br />
-                    <i class="fa fa-envelope"><span> info@MegSpace.com</span></i><br />
-                    <i class="fa fa-map-marker"><span> 140 MegaSpce News, Central London</span></i><br />
-                </div>
-            </div>
-            <br />
-            <div class="footer-section-contact-form">
-                <h2 style="color:#ff105e; font-size:35px;">Subscribe to our newsletter and magazine!</h2>
-                <p>Be at the forefront of knowledge, gaining exclusive access to vital, intriguing, and current
-                    global news updates.</p>
-                <form class="newsletter-mail">
-                    <input type="email" autocomplete="off" name="Email" placeholder="Your Email id" required>
-                    <button type="submit"><img src="/images/icons8-send-24.png" width="13px"></button>
-                </form>
-            </div>
-        </div>
-        <br />
-        <div class="footer-bottom">
-            &copy; MegaSpace 2023 By Sunidhi Abhange
-            <br /><br />
-            <div class="footer-socials">
-                <a href="https://www.instagram.com/" class="fa fa-instagram"
-                    style="color:black; text-decoration:none;"></a>
-                <a href="https://www.instagram.com/" class="fa fa-twitter"
-                    style="color:black; text-decoration:none;"></a>
-                <a href="https://www.Youtube.com/" class="fa fa-youtube" style="color:black; text-decoration:none;"></a>
-            </div>
-        </div>
-        </div>
-    </footer>
-    <script src="/app.js"></script>
-</body>
-
+                 <footer>
+                    <div class="footer-content">
+                            <div class="footer-section-about">
+                                <div class="logo=image">
+                                    <img src="/assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" alt="" width="80px">
+                                </div>
+                                <p>MegaSpace website keeps the audience informed, and provides a platform where it shares information about space.Get the latest space exploration, innovation and astronomy news. </p>
+                                <div class="contact">
+                                    <p style="font-size: larger; font-weight:bold;">Contact info: </p><br/>
+                                    <i class="fa fa-phone"><span> 123-456-789</span></i><br/>
+                                    <i class="fa fa-envelope"><span> info@MegSpace.com</span></i><br/>
+                                    <i class="fa fa-map-marker"><span> 140 MegaSpce News, Central London</span></i><br/>                                                   
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="footer-section-contact-form">
+                                <h2 style="color:#ff105e; font-size:35px;">Subscribe to our newsletter and magazine!</h2>
+                                <p>Be at the forefront of knowledge, gaining exclusive access to vital, intriguing, and current
+                                    global news updates.</p>
+                                    <form class="newsletter-mail">
+                                        <input type="email"  autocomplete="off" name="Email" placeholder="Your Email id" required>
+                                        <button type="submit"><img src="/assets/images/icons8-send-24.png" width="13px"></button>
+                                    </form>
+                            </div>
+                      </div>
+                        <br/>
+                        <div class="footer-bottom">
+                            &copy; MegaSpace 2023 By Sunidhi Abhange
+                            <br/><br/>
+                            <div class="footer-socials">
+                                <a href="https://www.instagram.com/" class="fa fa-instagram" style="color:black; text-decoration:none;"></a>
+                                <a href="https://www.instagram.com/" class="fa fa-twitter" style="color:black; text-decoration:none;"></a>
+                                <a href="https://www.Youtube.com/" class="fa fa-youtube" style="color:black; text-decoration:none;"></a>
+                            </div>
+                        </div>
+                    </div>
+                  </footer>
+                  <script src="assets/script/main.js"></script>
+                  <script src="assets/script/home.js"></script>
+    </body>
 </html>

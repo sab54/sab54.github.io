@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MegaSpace</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <!-- This code is using the `onload` event to call the `onload()` function when the webpage finishes loading for night mode. -->
+    <body onload="onload()">
+        <header>
+            <div class="popup" id="popup-box">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h3>Settings</h3>
+                    <fieldset>
+                        <legend>Prefences to User Screen</legend>
+                        <p>Dark/LightMode:</p><button class="container__btn" onclick="nightmode()">🌙/🌞</button><br/><br/>
+                        <p>Font Change:</p><button class="container__btn" onclick="fontchange()">+/-</button>
+                    </fieldset>
+                </div>
+            </div>
+        </header>
+         <!-- This code is creating a navigation bar with a logo, menu icon when mobile version, 
+            and a list of links.The logo is a clickable image that takes you to the homepage. 
+            The menu icon represents a dropdown menu for the navigation links. Each link in the list corresponds 
+            to a different page on the website, such as "Home," "News," "Education," "Feedback," and "Subscribe."
+             There is also a "Report" link and a "Settings" button included in the navigation bar. -->
+        <nav>
+            <a class="logo" href="index.html"><img src="assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" width="120"/></a>
+            <div class="bars">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link"><a href="news.html">News</a></li>
+                <li class="nav-link"><a href="education.html">Education</a></li>
+                <li class="nav-link"><a href="feedback.html">Feedback</a></li>
+                <li class="nav-link"><a href="subscribe.html">Subscribe</a></li>
+                <a class="fa fa-file" id="report" href="report.html"> Report</a>
+                <button class="fa fa-gear" onclick="togglePopup()"> Settings</button>
+            </ul>
+        </nav>
+        <section id="appearance">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <!-- The code  is creating a tabbed interface on a webpage. 
+                It allows users to switch between different sections of content by clicking on the corresponding tabs. 
+                In this specific code, there is an "Introduction" tab that is initially selected by default. 
+                When the user clicks on the tab, it displays the content related to the introduction of space exploration and 
+                the goals of your website "MEGASPACE." ITS the report. -->
+            <div class="report-tab">
+                <input type="radio" id="tab-intro" name="report-tab" checked="checked">
+                <label for="tab-intro">Introduction</label>
+                <div class="open-tab">
+                    <h4>Introduction</h4>
+                    <p> Humans have made extraordinary progress in space exploration. Currently, scientists are analysing conditions that allow humans to survive in space for lengthy durations.  Can 'space tourism' soon become a reality?
+                        <br/><br/>
+                        Many space agencies and commercial companies are exploring space with several different  objectives.Hence it is an attempt of my website “MEGASPACE” to bring all this excitement news that includes Artificial intelligence in rovers & landers,  automated and robotic exploration of the Solar System and beyond, crewed spaceflight and settlements on planets and mining of other planets. My website is a collection of historical facts and allows users to search and interact with other users to provide their views.
+                        <br/><br/>
+                        Today, machines are increasingly capable of independently performing tasks. These machines are designed for specific tasks and can withstand the extreme conditions of space. Recent launch of Chandrayan  rover in search of water on moon is a prime example of this. Space exploration will be a topic of discussion for the next 50 years and would interest wide range of audience be it a kid, youngster  or elderly and to professionals like scientists, programmers, writers. My attempt is to make the website content simple and comprehensive so everyone can understand and contribute to space exploration process.
+                        <br/><br/>
+                        Have organised and classified web content to create layout that’s loved by everyone. My website pages are connected in linear manner, following logical path of actions. For example, user navigate from main page to news page to quiz page and then to feedback page. This worked well because my website is small. This structure guides users through a predefined path highlighting key features and call to actions. Transitions between pages is natural and all pages are made accessible within three clicks. Similar content is grouped, menus or navigation bars guide users throughout the website and provide links to different pages. They enable users to navigate easily between sections and find information they need. Hyperlinks connect different pages within website establishing relationship between pages. Logical organisation of site structure simplified crawling, discovering and indexing content in search engine as a future extension.
+                    </p>
+                </div>
+                <input type="radio" id="tab-inspiration" name="report-tab">
+                <label for="tab-inspiration">Inspiration:</label>
+                <div class="open-tab">
+                    <h4>Inspiration</h4>
+                    <p>Nasa space agency: Latest space discoveries in weather forecast, astronomy and science of space travel have inspired me to create “MEGASPACE”. Lots of sources of information have been instigated to give final form to the website. I needed subject based inspiration for the news magazine on scientific content, subject tags on Nasa website screened a wide range of design examples including user experience and interactive design. Having a dependable starting place has facilitated me to meet user needs, it encouraged me to explore new design solutions and speed up design workflow. 
+                        <br/><br/>
+                        UOL: Web development, introduction to programming course I learnt, fused technology with creative thinking.Artificial intelligence and its application in space will be a perfect blend of inspiration that I would be learning in future. It will be bringing together like-minded faculty and students in a stimulating environment. 
+                        <br/><br/>
+                        Dribble: Pool of website design resources have inspired me to jump into the project faster with lots of design ideas and kept me up to date with latest design trends. The homepage design ensured that visitors will be welcomed and thus can create a good impression. This inspirational pool played an important role in the success of my space website and provided me with understandable and visually appealing illustrations, graphics, and typography. Moreover, I could easily find a beautiful colour palette that included brand colours consistently across all the pages.
+                        <br/><br/>
+                    </p>
+                </div>
+                <input type="radio" id="tab-acc" name="report-tab">
+                <label for="tab-acc">Accessibility:</label>
+                <div class="open-tab">
+                    <h4>Accessibility</h4>
+                    <p>
+                        MEGASPACE is designed to make sure it can be used by as many people as possible and meet WCAG2.1 accessibility standard. The web is designed to work for all people, whatever their hardware (mobile phones, smart TVs, and other devices with small screens) browser, language, or location. This includes those with impaired vision, motor difficulties .Web pages are designed for accessibility from the very beginning of project, so I don’t need to go back and re-do work. Changing settings in a browser, helped me to evaluate below aspects of accessibility. 
+                        <br/><br/>
+                        Many older users with limited fine motor control cannot use a mouse. My website does not rely on the mouse alone; it also makes all functionality available from a keyboard. Website supports dark/light mode themes. Light mode is  for people with normal vision which improves efficiency and productivity and  dark mode for people with limited visual capabilities and if working for late hours. Users with colour deficiencies can use contrasting colours on web content so they can easily see it.
+                        <br/><br/>
+                        My website allows to change the font settings so that it does not slow down the reading speed, vision loss, and reading disorders. Choosing the right font improves the legibility and readability of my site for wider audience online.
+                        <br/><br/>
+                    </p>
+                </div>
+                <input type="radio" id="tab-usability" name="report-tab">
+                <label for="tab-usability">Usability:</label>
+                <div class="open-tab">
+                    <h4>Usability</h4>
+                    <p>
+                        A clear purpose: Website design is made clean, coherent and simple. Each page has a clear individual purpose and objective that help users accomplish their need, reflects user intent in page layout, quality content and calls to action. Homepage is an asset, designed to be clearly different from all other pages and face to the world. It gets more page views than any other page it has a tagline that is brief, simple and to the point to attract the users about the site’s purpose. The homepage has been designed with a simple layout in the source HTML, and content and formatting of the tiles and cards are rendered during page load in JavaScript, for being able to dynamically handle the content.  Top menu is easy to navigate and clearly displays all the information a visitor might be looking for. As soon as user visit the homepage, they’re greeted with an image and demonstrates how to use the site. News search page with a type in field that is wide enough made it easier for the user to find old articles that are not on first page. This allowed them to find specific articles on any topic. This platform will give users a high degree of personalisation and control over the content they see on astronomy.
+                        <br/><br/>
+                        Cross device inter-usability: website is optimised to be responsive across devices. The webpages are fully visible and easily navigable on all devices be it mobile, tablet or desktop. CSS combining with HTML made responsive mobile friendly design possible for example navigation menus show up across different screen sizes, adapt image size and location i.e when homepage is compared on desktop a navbar is seen with categoriesand hovering on each category will reveal a dropdown menu and on mobile this collapses and improves appearance and performance.
+                        <br/><br/>
+                        Navigability: Usability was considered from users’ perspective to know how easy it is for the user to navigate through the website. CSS gave better user experience and makes user friendly formatting that is easy on the eyes when buttons, text are in logical place and well organised. It grouped all information and emphasised on high priority tasks that help the users to find what they need about the space exploration. It has best and most recent examples of space innovations. Horizontal navigation bar style is the important design element on a website. It lists major pages side by side and placed website header.
+                        <br/><br/>
+                        Three content categories– “News”, “Education” , “Login page” and “Feedback”. This provides visitors with easy access to the pages they’re looking for.When the page is scrolling down a pop up button will show to scroll back to the top of a page.
+                    </p>
+                </div>
+                <input type="radio" id="tab-learn" name="report-tab">
+                <label for="tab-learn">Learning:</label>
+                <div class="open-tab">
+                    <h4>Learning</h4>
+                    <p>
+                        I  have learnt lots of new things specifically related with javascript because it is the most common and powerful language used for making webpages interactive. HTML, CSS and javascript complement each other to give final webpage because it is the most common way to run JavaScript. I have learnt to create interactive content, control multimedia and animate images on a webpage. One of the aspects that I felt was very powerful is related to responsive design where web layout changes to suit different devices for example different screen width, orientation, or resolutions. A desktop layout for example will look terrible when viewed on mobile device so I provided media queries and applied viewports. Have learnt how javascript’s events provide dynamic interface to a webpage and hook to the elements in the document object model (DOM). For example javascript gets executed when user selects on HTML element (`querySelector’).Another example that I learned was when I click on HTML element an event listener is called and that does a particular task. I discovered that localStorage in JavaScript is like a special storage space in the web browser where I used for dark mode and font size. It allows you to keep dark mode and font size the same, even if you close the browser or refresh the page. It's super handy because you can save things like user preferences, cache data, or any other small bits of data that you need to access later.
+                        <br/><br/>
+                        I felt I needed more practice to understand the algorithm that browser follows to determine the hierarchical cascade of selectors like specificity in CSS.  Using advanced table features like adding extra column of data to table and applying different styles to the table. SEO was another feature that I needed more practise especially with the tags like title, meta,header that web crawler uses in search engine.
+                        <br/><br/>
+                        How to design website like a professional is another aspect that I learnt while working on the project. I learnt that before designing it is important to set the goal of the website. While designing many aspects need to be investigated like defining layout, claiming domain name, gathering the content, designing website elements, making it accessible to everyone and ultimately asking for feedback.
+                        <br/><br/>
+                    </p>
+                </div>
+                <input type="radio" id="tab-Eval1" name="report-tab">
+                <label for="tab-Eval1">Evaluation I:</label>
+                <div class="open-tab">
+                    <h4>Evaluation I</h4>
+                    <p>
+                        Web users usually have little time. My website provides answers to visitor’s questions quickly and directly in space news.  It makes clear to the user within few seconds that my website can contribute to the solution by answering all W-questions. My focus was on comprehensibility. For example, difficult technical terms are generally kept to a minimum, as they even make it difficult for corresponding professionals to understand the context. This also applies to text entries such as a search function. Content of each page is particularlyrelevant and is therefore used intensively, which in turn makes up a significant part of the success about my website. 
+                        <br/><br/>
+                        MEGASPACE makes it easy for visitors to contact and provide feedback. I believe that if the communication is sought by the visitor, it means that user has an actual interest in my service. This I would take advantage of. I have included number of contact options like phone, chat and online feedback with simple intuitive questions for target audience interested in space news. 
+                        <br/><br/>
+                        Fast loading time is another criterion considered while designing the website. If a page takes longer than two seconds to load, a significant number of users jump straight off and leave the  page. For example, I have decided to go with a single [main.css] file for generic site-wide design elements, and subpages. CSS allows to use less code and one rule that applies to all occurrences of tag within HTML document. Loading a single, large CSS file is faster than loading multiple small CSS files because the browser must make one request to the server to download entire CSS file rather than making multiple requests. I consider this to be a  success factor and good trade-off between speed and modularity.
+                        <br/><br/>
+                    </p>
+                </div>
+                <input type="radio" id="tab-Eval2" name="report-tab">
+                <label for="tab-Eval2">Evaluation II:</label>
+                <div class="open-tab">
+                    <h4>Evaluation II</h4>
+                    <p>
+                        Users expect websites to work for all target group and I had to ensure that my website has no problems for visually impaired. My website currently does not render text and graphics content as speech. Screen readers are excellent tool necessary for blind people, important for partially sighted usersand helpful for people with reading disorders. There are plenty of options available for screen readers, for desktop and laptop windows computers, there are two screen readers NVDA and JAWS. On android it is talkback and on iPhone just turn on voiceover. For screen reader to speak correct language add lang attribute in the html element.
+                        <br/><br/>
+                        There are some pages where my website scores good related to interactivity and call to actions. For example, “Feedback” page ensures to have “Contact Us” CTA and quiz page ensures to have questions and answers with scores as CTA and informs intuitively to users as what to do next. But some pages are not action oriented for example what action visitors would take when they get to the landing page whether they  would download the content or schedule a free consultation and more over CTA does not standout as it not noticeable on homepage. In future, I would ensure that every page has at least one CTA that is relevant to the content of the page and clearly mentions about what is on offer for example it states about weekly e-newsletter, what is free.
+                        <br/><br/>
+                        My website has a basic search facility to access the past news. I would like to optimise search engine to get historical articles that are most recent and significant for example user want to get NASA’s ambition for putting a man on Mars. Then search should return the story unfolding the news archive.
+                        <br/><br/>
+                    </p>
+                </div>
+                <input type="radio" id="tab-res" name="report-tab">
+                <label for="tab-res">Resources:</label>
+                <div class="open-tab">
+                    <h4>Resources</h4>
+                    <p>Main resources used for implementing the site:<br/><br/>
+                        [1]<a href="https://www.w3schools.com/howto/howto_css_modals.asp" style="color: white;">Visit W3Schools.com!</a>, documentation of HTML and CSS, 2023.I discovered a website that provided me with ideas for creating a button to scroll to the top of the page and a popup modal. Within this popup settings menu, I added elements such as night mode and text size
+                        <br/><br/>
+                        [2]<a href="https://javascript.plainenglish.io/build-a-dark-mode-toggle-with-javascript-and-localstorage-8022b492fb9e" style="color: white;">JavaScript in plain Test</a>.I obtained assistance from this website to implement night mode and font size settings and store them in localStorage.
+                        <br/><br/>
+                        [3]<a href="https://en.wikipedia.org/w/index.php?search=astronomy+space&title=Special%3ASearch&ns0=1" style="color: white;">WikiPedia, History of space astronomy article and references, 2023</a>
+                        <br/><br/>
+                        [4]<a href="https://www.nasa.gov/"style="color: white;">Nasa website for inspiration,2023.</a>I drew inspiration from NASA for the structure of my website and incorporated a similar color scheme.
+                        <br/><br/>
+                        [5]<a href="https://www.figma.com"style="color: white;">Figma, Mockup and Wireframe editing, 2023.</a> I used this for making the wireframes for my website.
+                        <br/><br/>
+                        [6]<a href="https://miro.com/"style="color: white;">Miro , SiteMap</a>
+                        <br/><br/>
+                    </p>
+                </div>
+                <input type="radio" id="tab-appe" name="report-tab">
+                <label for="tab-appe">Appendices:</label>
+                <div class="open-tab">
+                    <h4><u>Wireframes</u></h4><br/>
+                    <details class="wireframes-details">
+                        <summary>1]Home page desktop + mobile</summary>
+                        <img src="/assets/images/appendics/wireframes/home-page.jpeg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>2]News page desktop + mobile</summary>
+                        <img src="/assets/images/appendics/wireframes/news-page.jpeg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>3]Feedback page desktop + mobile</summary>
+                        <img src="/assets/images/appendics/wireframes/feedback-page.jpeg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>4]Education page desktop + mobile</summary>
+                        <img src="/assets/images/appendics/wireframes/education-page.jpeg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>Subscribe page desktop + mobile</summary>
+                        <img src="/assets/images/appendics/wireframes/subscribe-page.jpeg">
+                    </details>
+                    <br/>
+                    <br/>
+                    <h4>SiteMaps</h4>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>SiteMap</summary>
+                        <img src="/assets/images/appendics/sitemap/sitemap.jpg">
+                    </details>
+                    <br/>
+                    <h4>Mockup</h4>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>1]Home page</summary>
+                        <img src="/assets/images/appendics/mockups/MegaSpace.jpg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>2]News page</summary>
+                        <img src="/assets/images/appendics/mockups/MegaSpace-news.jpg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>3]Feedback page</summary>
+                        <img src="/assets/images/appendics/mockups/MegaSpace-feedback.jpg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>4]Education page </summary>
+                        <img src="/assets/images/appendics/mockups/MegaSpace-education.jpg">
+                    </details>
+                    <br/>
+                    <details class="wireframes-details">
+                        <summary>5]Subscribe page</summary>
+                        <img src="/assets/images/appendics/mockups/MegaSpace-susbscribe.jpg">
+                    </details>
+                </div>
+            </section>
+            <!-- This code is creating the footer section of a webpage.It includes the logo, contact information, and a subscription form for the newsletter and magazine. -->
+            <footer>
+                <div class="footer-content">
+                    <br/>
+                    <div class="footer-section-about">
+                        <div class="logo=image">
+                            <img src="/assets/images/Logo/megaspace-low-resolution-logo-color-on-transparent-background.png" alt="" width="80px">
+                        </div>
+                        <p>MegaSpace website keeps the audience informed, and provides a platform where it shares information about space.Get the latest space exploration, innovation and astronomy news.</p>
+                        <div class="contact">
+                            <p style="font-size: larger; font-weight:bold;">Contact info: </p><br/>
+                            <i class="fa fa-phone"><span> 123-456-789</span></i><br/>
+                            <i class="fa fa-envelope"><span> info@MegSpace.com</span></i><br/>
+                            <i class="fa fa-map-marker"><span> 140 MegaSpce News, Central London</span></i><br/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="footer-section-contact-form">
+                        <h2 style="color:#ff105e; font-size:35px;">Subscribe to our newsletter and magazine!</h2>
+                        <p>Be at the forefront of knowledge, gaining exclusive access to vital, intriguing, and current
+                            global news updates.</p>
+                            <form class="newsletter-mail">
+                                <input type="email"  autocomplete="off" name="Email" placeholder="Your Email id" required>
+                                <button type="submit"><img src="/assets/images/icons8-send-24.png" width="13px"></button>
+                            </form>
+                        </div>
+                        <br/>
+                        <div class="footer-bottom">
+                            &copy; MegaSpace 2023 By Sunidhi Abhange
+                            <br/><br/>
+                            <div class="footer-socials">
+                                <a href="https://www.instagram.com/" class="fa fa-instagram" style="color:black; text-decoration:none;"></a>
+                                <a href="https://www.instagram.com/" class="fa fa-twitter" style="color:black; text-decoration:none;"></a>
+                                <a href="https://www.Youtube.com/" class="fa fa-youtube" style="color:black; text-decoration:none;"></a>
+                            </div>
+                        </div>
+                </div>
+            </footer>
+        <script src="assets/script/main.js"></script>
+    </body>
+</html>
