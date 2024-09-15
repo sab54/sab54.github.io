@@ -1,89 +1,88 @@
 /* All pages */
 
-/* his code sets the margin and padding to 0, uses the 'Courier New'
-font, and applies the `border-box` box-sizing. It also sets the
-background color and border using custom CSS variables. Overall,
- this code helps create a consistent and visually appealing layout
-  for the webpage. */
-  body, html {
+/* This code sets the margin and padding to 0, uses the 'Courier New' font,
+   and applies the `border-box` box-sizing. It also sets the background color
+   and border using custom CSS variables. Overall, this code helps create a
+   consistent and visually appealing layout for the webpage. */
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
     background-color: var(--background-color);
     border: var(--border);
-  }
+}
 
-  /* This CSS code sets the margin and padding to 0 for all
-  elements, including pseudo-elements `::before` and `::after`.
-   It also applies the `border-box` box-sizing to ensure that the
-   total width and height of elements include the content, padding,
-   and border. This helps create a consistent and predictable layout
-   for the webpage. */
-  *,
-  *::before,
-  *::after {
+/* This CSS code sets the margin and padding to 0 for all elements, including
+     pseudo-elements `::before` and `::after`. It also applies the `border-box`
+     box-sizing to ensure that the total width and height of elements include
+     the content, padding, and border. This helps create a consistent and
+     predictable layout for the webpage. */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  /*popup button*/
-  /* This CSS code is for creating a popup overlay with a content box. */
-  .popup .overlay{
-    position:fixed;
-    top: 0px;
-    left: 0px;
+/* Popup button */
+.popup .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
     display: none;
-  }
+}
 
-  .popup .content{
+.popup .content {
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%) scale(0);
-    background: #fff ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
     background-color: var(--background-color);
     width: 500px;
-    height:400px;
+    height: 400px;
     z-index: 2;
     text-align: center;
-    padding:20px;
+    padding: 20px;
     box-sizing: border-box;
-  }
+}
 
-  .popup .close-btn{
-    position:absolute;
+.popup .close-btn {
+    position: absolute;
     right: 20px;
-    top:20px;
+    top: 20px;
     width: 30px;
     height: 30px;
     background: #222;
-    color:#fff;
-    font-size:25px;
+    color: #fff;
+    font-size: 25px;
     font-weight: 600;
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
-  }
+}
 
-  .popup.active .overlay{
-    display:block;
-  }
+.popup.active .overlay {
+    display: block;
+}
 
-  .popup.active .content{
+.popup.active .content {
     transition: all 300ms ease-in-out;
-    transform: translate(-50%,-50%) scale(1);
-  }
-  /* end of popup */
+    transform: translate(-50%, -50%) scale(1);
+}
 
-  /* bottom to top of the page */
-  #myBtn {
+/* End of popup */
+
+/* Bottom to top button */
+#myBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -97,38 +96,38 @@ background color and border using custom CSS variables. Overall,
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-  }
+}
 
-  #myBtn:hover {
+#myBtn:hover {
     background-color: #555;
-  }
+}
 
-  /* night and morning mode*/
-
-  body:not(.night-mode) {
+/* Night and morning mode */
+body:not(.night-mode) {
     --background-color: #E6E6FA;
     --color: #1e272e;
-  }
+}
 
-  .night-mode {
+.night-mode {
     --background-color: #37434e;
     color: rgb(241, 242, 246);
-  }
+}
 
-  /* text larger and smaller */
-  #appearance{
+/* Text larger and smaller */
+#appearance {
     font-size: var(--font-size);
-  }
+}
 
-  #appearance:not(.text-size) {
-    --font-size:20px;
-  }
+#appearance:not(.text-size) {
+    --font-size: 20px;
+}
 
-  .text-size{
+.text-size {
     --font-size: 15px;
-  }
+}
 
-  footer{
+/* Footer */
+footer {
     position: static;
     bottom: 0;
     background-color: #1e272e;
@@ -136,102 +135,102 @@ background color and border using custom CSS variables. Overall,
     width: 100%;
     padding-top: 15px;
     color: #fff;
-  }
+}
 
-    .footer-content{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-    }
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
 
-  .footer-content p{
+.footer-content p {
     font-size: 14px;
     color: #cacdd2;
-  }
+}
 
-  .footer-bottom{
+.footer-bottom {
     background-color: #1e272e;
     color: #959393;
     width: 100%;
     text-align: center;
-  }
+}
 
-  /* button for night toogle and text size toogle*/
-
-  .container__btn {
+/* Button for night toggle and text size toggle */
+.container__btn {
     padding: 10px;
     color: var(--color);
     background-color: var(--background-color);
     border: 1px solid var(--color);
     border: 1px solid var(--white);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
-  }
+}
 
-
-  nav {
+/* Navigation */
+nav {
     background-color: #1e272e;
     position: relative;
-    display:flex;
+    display: flex;
     padding: 1% 6%;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-  }
+}
 
-  /* responsive */
-  nav.active {
+/* Responsive navigation adjustments */
+nav.active {
     flex-direction: column;
     align-items: flex-start;
-  }
+}
 
-  nav .bars {
+nav .bars {
     position: absolute;
     right: 1rem;
     font-size: xx-large;
     display: none;
     cursor: pointer;
-  }
+}
 
-  ul.nav-links {
-    flex:0%;
+ul.nav-links {
+    flex: 0%;
     text-align: right;
-  }
+}
 
-  /* responsive */
-    nav.active ul.nav-links {
+/* Responsive adjustments */
+nav.active ul.nav-links {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-  }
+}
 
-  li.nav-link {
+li.nav-link {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-  }
+}
 
-  li.nav-link a {
+li.nav-link a {
     color: #ffffff;
     text-decoration: none;
-    font-size:20px;
-  }
+    font-size: 20px;
+}
 
-  .nav-links li a:hover{
+.nav-links li a:hover {
     border-bottom: 3px solid #ff105e;
-  }
+}
 
-  li a.first{
+li a.first {
     border-bottom: 3px solid rgb(255, 16, 94);
-  }
+}
 
-  .fa-gear , #report{
+.fa-gear,
+#report {
     padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     cursor: pointer;
     border: none;
@@ -239,177 +238,235 @@ background color and border using custom CSS variables. Overall,
     color: #E6E6FA;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-  }
+}
 
-
-  .fa-gear:hover , #report:hover{
+.fa-gear:hover,
+#report:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 15px rgba(255, 16, 94, 0.4);
-  }
+}
 
-  /*end of navigation bar*/
+/* End of navigation bar */
 
-  /* Home page*/
-  /*cursoal for home page*/
-  .container-1 {
+/* Home page */
+
+/* Carousel for home page */
+.container-1 {
     display: flex;
     background-color: rgb(238, 238, 238);
-  }
+}
 
-  .text-container{
+.text-container {
     background-color: #243B55;
     color: white;
     width: 400px;
-  }
+}
 
-  .text-container a{
-    text-decoration: none; color: white; font-size: 20px;
-  }
+.text-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
 
-  .image-container {
+.image-container {
     width: 100%;
-  }
+}
 
-  .image-container img {
+.image-container img {
     width: 100%;
-    min-height: 100%;
-  }
+    height: auto;
+}
 
-  .slider-container {
+.slider-container {
     max-width: 1500px;
     overflow: hidden;
     position: relative;
     margin-left: 30px;
     margin-right: 30px;
-  }
+}
 
-  .slider {
+.slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
+}
 
-  .slide {
+.slide {
     flex: 0 0 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
+}
 
-  .slide img {
+.slide img {
     max-width: 100%;
     height: auto;
-  }
+}
 
-  /* buttons for coursoal */
-  .next-btn {
+/* Buttons for carousel */
+.next-btn {
     right: 15px;
-  }
+}
 
-  .prev-btn {
+.prev-btn {
     left: 40px;
-  }
+}
 
-  .prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     padding: 10px;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 0;
     transition: 0.6s ease;
     opacity: 0.5;
     border-radius: 50%;
-    user-select:none;
-  }
-  /*end of cursoal*/
+    user-select: none;
+}
 
-  /* news cards */
+/* End of carousel */
 
-
-  .cards{
+/* News cards */
+.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 1500px;
-  }
+}
 
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 30px;
     text-align: center;
-  }
+}
 
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-  .container {
+.container {
     padding: 2px 16px;
-  }
+}
 
-  .card hr{
-    margin-left: 20px ;
-    border:  1px solid rgb(109, 106, 106);
+.card hr {
+    margin-left: 20px;
+    border: 1px solid rgb(109, 106, 106);
     width: 310px;
+}
 
-  }
-
-  .card .container a{
+.card .container a {
     text-decoration: none;
     color: rgb(150, 140, 140);
-  }
+}
 
-  time{
+time {
     color: #ff105e;
-  }
+}
 
-  .likes-dislikes{
-    margin:auto;
-  }
+.likes-dislikes {
+    margin: auto;
+}
 
-  .fa-thumbs-up {
+.fa-thumbs-up {
     color: grey;
-  }
+}
 
-  .green{
+.green {
     color: green;
-  }
+}
 
-  .fa-thumbs-down {
+.fa-thumbs-down {
     color: grey;
-  }
+}
 
-  .red {
+.red {
     color: red;
-  }
+}
 
-  .filter .cards .card{
+.filter .cards .card {
     display: none;
-  }
+}
 
-  .filter .cards .card:nth-child(1),
-  .filter .cards .card:nth-child(2),
-  .filter .cards .card:nth-child(3){
+.filter .cards .card:nth-child(1),
+.filter .cards .card:nth-child(2),
+.filter .cards .card:nth-child(3) {
     display: inline-block;
-  }
+}
 
-  #load-more{
-    background-color:#243B55;
+#load-more {
+    background-color: #243B55;
     border: none;
     color: white;
-    width:1440px;
+    width: 1440px;
     margin-left: 29px;
     text-align: center;
     font-size: 20px;
-  }
+}
 
-  #load-more:hover{
+#load-more:hover {
     background-color: crimson;
     border: none;
-    color:#fff;
-  }
+    color: #fff;
+}
 
+/* Responsive adjustments */
 
-  /* end of news cards */
+/* Mobile devices */
+@media only screen and (max-width: 600px) {
+    .text-container {
+        width: 100%;
+    }
 
+    .slider-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #myBtn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    nav.active {
+        flex-direction: column;
+    }
+
+    .popup .content {
+        width: 90%;
+        height: auto;
+    }
+
+    #load-more {
+        font-size: 16px;
+        /* Adjust font size */
+        padding: 12px;
+        /* Adjust padding */
+        width: 90%;
+        /* Adjust width */
+    }
+}
+
+/* Tablets and small desktops */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .text-container {
+        width: 300px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #load-more {
+        font-size: 18px;
+        /* Slightly smaller font size */
+        padding: 14px;
+        /* Slightly adjusted padding */
+        width: 80%;
+        /* Adjust width */
+    }
+}
